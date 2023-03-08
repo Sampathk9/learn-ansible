@@ -43,3 +43,13 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+
+#Accessing Fact precedence
+- name : Access a fact
+  hosts: all
+  connection: local
+  tasks:
+    - name: access a fact
+      ansible.builtin.debug:
+        msg: Ansible Host name = {{ansible_fqdn}}
+
