@@ -18,6 +18,7 @@
     - name: Access a variable
       ansible.builtin.debug:
         msg: URL = {{URL}}
+#vars_files can also be declared on task level
 
 
 
