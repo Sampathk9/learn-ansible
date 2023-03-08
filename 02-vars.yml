@@ -34,7 +34,7 @@
         URL: task.example.com
 
 
-
+#coming from inventory file
 - name : Declare variable from inventory level
   hosts: all
   connection: local
