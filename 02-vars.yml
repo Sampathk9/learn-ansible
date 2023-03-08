@@ -44,7 +44,7 @@
         msg: URL = {{URL}}
 
 
-#Accessing Fact precedence
+#Accessing Fact pre-defined ansible_fqdn
 - name : Access a fact
   hosts: all
   connection: local
@@ -53,3 +53,11 @@
       ansible.builtin.debug:
         msg: Ansible Host name = {{ansible_fqdn}}
 
+
+#run time variables
+- name : Register a variable
+  hosts: all
+  connection: local
+  tasks:
+    - name: run a shell command
+      ansible.builtin.shell: uptime
